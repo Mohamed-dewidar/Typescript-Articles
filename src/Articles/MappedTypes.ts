@@ -67,4 +67,10 @@ type ColorGetters = { [key in keyof Color as `get${Capitalize<key>}`]: () => RGB
 // 2️⃣ You can filter out keys by producing never via a conditional type
 type filterRed = [{ [key in keyof Color as Exclude<key, 'red'>]: Color[key] }];
 
-// 3️⃣ You can map over arbitrary unions, not just unions of string | number | symbol, but unions of any type:
+/******************* ⏺⏺⏺ Excluding False Values ⏺⏺⏺ ******************
+🔗 https://medium.com/hypersphere-codes/advanced-typescript-mapped-types-and-more-b5d023bd6539
+*/
+
+const divColors = { yellow: true, red: true, green: false, white: true } as const;
+type filterActive<T> = { [key in keyof T as T[key] extends true ? key : never]: T[key] };
+type activeColors = filterActive<typeof divColors>;

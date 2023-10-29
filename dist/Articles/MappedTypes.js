@@ -1,3 +1,6 @@
 /****************************************** 😪😪😪😪😪😪😪😪TypeScript: Mapped Types😪😪😪😪😪😪😪😪😪 **************************************/
 let myDic = { IsValid: x => x === 2 };
-// 3️⃣ You can map over arbitrary unions, not just unions of string | number | symbol, but unions of any type:
+/******************* ⏺⏺⏺ Excluding False Values ⏺⏺⏺ ******************
+🔗 https://medium.com/hypersphere-codes/advanced-typescript-mapped-types-and-more-b5d023bd6539
+*/
+const divColors = { yellow: true, red: true, green: false, white: true };
