@@ -36,4 +36,23 @@ function listToDict(list, callback) {
     });
     console.log(dict);
 }
-listToDict(mylist, ele => ele.id.toString());
+const CoffeeObj = {};
+Object.defineProperty(CoffeeObj, 'id', { value: 2 });
+class Pop {
+    constructor(...items) {
+        this.id = 1;
+    }
+}
+let p1 = new Pop(1, 2, 3);
+console.log(p1);
+const api = (function () {
+    const o = {
+        copyToClipboard(str) {
+            return navigator.clipboard.writeText(str);
+        },
+    };
+    return o;
+})();
+let copyBtn = document.createElement('button');
+copyBtn.id = 'copy-to-clipboard';
+document.body.appendChild(copyBtn);

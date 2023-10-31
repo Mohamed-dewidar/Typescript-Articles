@@ -104,7 +104,7 @@ function listToDict<T>(list: T[], callback: (arg: T) => string) {
   console.log(dict);
 }
 
-listToDict(mylist, ele => ele.id.toString());
+// listToDict(mylist, ele => ele.id.toString());
 
 interface myType {
   name: string;
@@ -118,9 +118,35 @@ type MyCoffee = {
   };
   robusta: {
     id: 2;
-    location: 'Tagmo3 😂';
+    location: 'Tagmo3';
   };
 };
 
 type valueOf<T> = T[keyof T];
 type valueOfCoffee = valueOf<MyCoffee>;
+
+const CoffeeObj = {};
+Object.defineProperty(CoffeeObj, 'id', { value: 2 });
+
+class Pop {
+  private id;
+  constructor(...items) {
+    this.id = 1;
+  }
+}
+
+let p1 = new Pop(1, 2, 3);
+console.log(p1);
+
+const api = (function () {
+  const o = {
+    copyToClipboard(str) {
+      return navigator.clipboard.writeText(str);
+    },
+  };
+  return o;
+})();
+
+let copyBtn = document.createElement('button');
+copyBtn.id = 'copy-to-clipboard';
+document.body.appendChild(copyBtn);
