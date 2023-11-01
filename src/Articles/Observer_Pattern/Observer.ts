@@ -19,7 +19,7 @@ export default Object.freeze({
   },
 });
 
-// ❗❗❗ The observer objects aren't tightly coupled to the observable object, throught loose couplingand can be (de)coupled at any time.
+// ❗❗❗ The observer objects aren't tightly coupled to the observable object, they are loose coupled
 // ❗❗❗ The observable object is responsible for monitoring the events, while the observers simply handle the received data.
 
 /******************* ⏺⏺⏺ Coupling ⏺⏺⏺ ******************
@@ -27,7 +27,7 @@ export default Object.freeze({
 
  📙📙📙 Much more about Coupling Link Above 👆👆👆
 
- // Coupling is a design principle in software engineering that refers to the degree of independence between components or modules in a system. 
+ //✅ Coupling is a design principle in software engineering that refers to the degree of independence between components or modules in a system. 
  * It is a measure of how much one component knows about the inner workings or details of another component. 
 */
 

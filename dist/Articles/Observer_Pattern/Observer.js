@@ -14,14 +14,14 @@ export default Object.freeze({
         observers.filter(ele => ele === func);
     },
 });
-// ❗❗❗ The observer objects aren't tightly coupled to the observable object, throught loose couplingand can be (de)coupled at any time.
+// ❗❗❗ The observer objects aren't tightly coupled to the observable object, they are loose coupled
 // ❗❗❗ The observable object is responsible for monitoring the events, while the observers simply handle the received data.
 /******************* ⏺⏺⏺ Coupling ⏺⏺⏺ ******************
 🔗 https://www.techtarget.com/searchnetworking/definition/loose-coupling#:~:text=Loose%20coupling%20is%20an%20approach,one%20element%20has%20of%20another.
 
  📙📙📙 Much more about Coupling Link Above 👆👆👆
 
- // Coupling is a design principle in software engineering that refers to the degree of independence between components or modules in a system.
+ //✅ Coupling is a design principle in software engineering that refers to the degree of independence between components or modules in a system.
  * It is a measure of how much one component knows about the inner workings or details of another component.
 */
 /**
